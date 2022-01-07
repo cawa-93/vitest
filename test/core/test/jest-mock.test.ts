@@ -21,6 +21,7 @@ describe('jest mock compat layer', () => {
     expect(spy.mock.calls[0]).toEqual(['hello'])
 
     spy('world')
+
     expect(spy.mock.calls).toEqual([['hello'], ['world']])
 
     spy.mockReset() // same as mockClear()
